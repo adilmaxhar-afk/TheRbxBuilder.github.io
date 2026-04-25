@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>$1 Roblox Game Maker - Custom Games Fast!</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <!-- Stripe -->
+    <script src="https://js.stripe.com/v3/"></script>
+    <!-- EmailJS -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <i class="fab fa-roblox"></i>
+                    <span>Roblox Game Maker</span>
+                </div>
+                <div class="nav-menu">
+                    <a href="#home">Home</a>
+                    <a href="#services">Services</a>
+                    <a href="#examples">Examples</a>
+                    <a href="#order">Order $1</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1><span class="dollar">$1</span> Custom Roblox Games!</h1>
+            <p>Describe your dream game → I build it in 24-48 hours<br><strong>✅ Stripe Payments • Instant Email • 100% Satisfaction</strong></p>
+            <div class="cta-buttons">
+                <button class="btn-primary" onclick="scrollToOrder()">Pay $1 → Get Game</button>
+                <button class="btn-secondary" onclick="scrollToExamples()">See Examples</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2>Games I Build For $1</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <i class="fas fa-star"></i>
+                    <h3>Obbies</h3>
+                    <ul>
+                        <li>10-100 stages</li>
+                        <li>Checkpoints & leaderboards</li>
+                        <li>VIP areas</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-users"></i>
+                    <h3>Tycoons</h3>
+                    <ul>
+                        <li>Full business sim</li>
+                        <li>Upgrades & rebirths</li>
+                        <li>Auto-collectors</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-fist-raised"></i>
+                    <h3>Fighters</h3>
+                    <ul>
+                        <li>PvP arenas</li>
+                        <li>Combos & abilities</li>
+                        <li>Leaderboards</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-gem"></i>
+                    <h3>Pet Sims</h3>
+                    <ul>
+                        <li>Collect & fuse</li>
+                        <li>Multiple worlds</li>
+                        <li>Trading system</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-car"></i>
+                    <h3>Racing</h3>
+                    <ul>
+                        <li>Car customization</li>
+                        <li>Tracks & drift</li>
+                        <li>Dealerships</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-magic"></i>
+                    <h3>ANY IDEA!</h3>
+                    <ul>
+                        <li>Horror/Survival</li>
+                        <li>RP/Town</li>
+                        <li>Your custom concept</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Examples -->
+    <section id="examples" class="examples">
+        <div class="container">
+            <h2>Recent $1 Games Delivered</h2>
+            <div class="examples-grid">
+                <div class="example-card">
+                    <div class="example-image" style="background: linear-gradient(45deg, #ff6b6b, #ee5a52);">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3>⭐ Lava Obby Pro</h3>
+                    <p>75 stages • 500+ players • VIP</p>
+                </div>
+                <div class="example-card">
+                    <div class="example-image" style="background: linear-gradient(45deg, #4ecdc4, #44a08d);">
+                        <i class="fas fa-paw"></i>
+                    </div>
+                    <h3>🐾 Pet Empire</h3>
+                    <p>5 worlds • Egg system • Trading</p>
+                </div>
+                <div class="example-card">
+                    <div class="example-image" style="background: linear-gradient(45deg, #feca57, #ff9ff3);">
+                        <i class="fas fa-coins"></i>
+                    </div>
+                    <h3>🍕 Pizza Tycoon</h3>
+                    <p>Rebirths • 20 upgrades • Pets</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Order Form -->
+    <section id="order" class="order-form">
+        <div class="container">
+            <h2><i class="fas fa-dollar-sign"></i> Pay $1 → Get Custom Game</h2>
+            <form id="gameForm" class="order-form-content">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Discord (Required)</label>
+                        <input type="text" id="discord" placeholder="YourDiscord#1234" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Game Title</label>
+                        <input type="text" id="title" placeholder="Ultimate Obby 2024">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Game Types</label>
+                    <div class="checkbox-grid">
+                        <label><input type="checkbox" value="Obby"> 🏃 Obby</label>
+                        <label><input type="checkbox" value="Tycoon"> 💰 Tycoon</label>
+                        <label><input type="checkbox" value="Fighting"> ⚔️ Fighting</label>
+                        <label><input type="checkbox" value="Pets"> 🐾 Pet Sim</label>
+                        <label><input type="checkbox" value="Racing"> 🚗 Racing</label>
+                        <label><input type="checkbox" value="Other"> ✨ Other</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Game Description <span style="color: #ffd700;">(Be detailed!)</span></label>
+                    <textarea id="description" rows="6" placeholder="Example: '50 stage obby with ice/lava/wind stages, VIP server, leaderboards, checkpoints every 5 stages, modern gui, mobile support'" required></textarea>
+                </div>
+
+                <div class="payment-section">
+                    <div class="payment-card">
+                        <i class="fas fa-credit-card"></i>
+                        <div>
+                            <h3>Secure Payment</h3>
+                            <div class="price">$1.00 USD</div>
+                        </div>
+                    </div>
+                    <div id="payment-element">
+                        <!-- Stripe will mount here -->
+                    </div>
+                </div>
+
+                <button type="submit" class="btn-primary full-width" id="submitBtn">
+                    <span id="button-text">💳 Pay $1 → Build My Game</span>
+                    <div id="loading-spinner" style="display: none;">
+                        <i class="fas fa-spinner fa-spin"></i> Processing...
+                    </div>
+                </button>
+
+                <div id="payment-message"></div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Questions?</h2>
+            <p>DM Discord: <strong>yourusername#1234</strong></p>
+            <div class="social-links">
+                <a href="#" class="discord-btn"><i class="fab fa-discord"></i> Add Me</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2024 Roblox Game Maker • Custom games delivered in 24-48hrs • $1 only 🚀</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
